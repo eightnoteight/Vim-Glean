@@ -13,7 +13,7 @@ def cpprun():
     inp_f = '/tmp/{0:.6}.in'.format(time())
     open(inp_f, 'w').writelines(['\n'.join(inp), '\n'])
     open(code_f, 'w').writelines(['\n'.join(code), '\n'])
-    vim.command('!g++ -Wall {0:s} -o {1:s} && {1:s} < {2:s}'.format(
+    vim.command('!g++ -Wall {0:s} -o {1:s} && echo "---executing..." && {1:s} < {2:s}'.format(
         code_f,
         code_f[:-2],
         inp_f
@@ -26,7 +26,7 @@ def crun():
     inp_f = '/tmp/{0:.6}.in'.format(time())
     open(inp_f, 'w').writelines(['\n'.join(inp), '\n'])
     open(code_f, 'w').writelines(['\n'.join(code), '\n'])
-    vim.command('!g++ -Wall {0:s} -o {1:s} && {1:s} < {2:s}'.format(
+    vim.command('!g++ -Wall {0:s} -o {1:s} && echo "---executing..." && {1:s} < {2:s}'.format(
         code_f,
         code_f[:-2],
         inp_f
