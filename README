@@ -6,3 +6,49 @@ Sublime Input (https://packagecontrol.io/packages/Sublime%20Input)
 
 I am using this extensively for competitive programming in which, i'm
 too busy to develop/improve this tool any further.
+
+currently it supports running cpp, c, python.
+
+## python files
+keep your input between '# GleanStart' and '# GleanEnd' as comment. the first character(#)
+will be stripped off and the rest is sent to the stdin of your python file.
+
+###example python file
+```
+#!/usr/bin/env python
+# GleanStart
+#hello input!
+#hello input!
+# GleanEnd
+print repr(raw_input())
+print repr(raw_input())
+```
+
+###output:
+'hello world!'
+'hello world!'
+
+
+## cpp/c files
+The lines between '/*GleanStart' and 'GleanEnd*/' will be sent as stdin to a.out
+
+###example python file
+```
+#include <bits/stdc++.h>
+using namespace std;
+/*GleanStart
+hello input!
+GleanEnd*/
+int main(int argc, char** argv)
+{
+    string str;
+    cin >> str;
+    cout << str;
+return 0;
+}
+print repr(raw_input())
+print repr(raw_input())
+```
+
+###output:
+hello input!
