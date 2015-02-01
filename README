@@ -23,7 +23,6 @@ will be stripped off and the rest is sent to the stdin of your python file.
 print repr(raw_input())
 print repr(raw_input())
 ```
-
 ###output:
 'hello world!'
 'hello world!'
