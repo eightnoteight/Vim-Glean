@@ -7,6 +7,11 @@ Sublime Input (https://packagecontrol.io/packages/Sublime%20Input)
 I am using this extensively for competitive programming in which, i'm
 too busy to develop/improve this tool any further.
 
+## Installation
+for vundle users, just add below line to your .vimrc and run BundleInstall
+
+Bundle 'eightnoteight/Vim-Glean'
+
 currently it supports running cpp, c, python.
 
 ## python files
